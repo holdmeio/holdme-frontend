@@ -414,8 +414,32 @@ a.hm-btn-outline {
     height: auto;
     min-height: auto;
 }
-
-
+.hm-blocks-outer.simple>.hm-block-item {
+    float: none;
+    display: inline-block;
+}
+.hm-blocks-outer.simple {
+    max-width: 765px;
+    margin: 20px auto;
+    text-align: center;
+}
+.hm-form.line {
+    max-width: 500px;
+    margin: auto;
+}
+.hm-form.line>input {
+    display: block;
+    width: 100%;
+    border: 0;
+    background: transparent;
+    border-bottom: 1px solid #7f7f7f;
+}
+.hm-form.line>label>input {
+    width: auto;
+    display: inline-block;
+    min-width: 0;
+    margin: 10px;
+}
 
 
 /* Animations*/
