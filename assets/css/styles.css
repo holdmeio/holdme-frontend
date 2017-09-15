@@ -13,6 +13,10 @@
 body {    
     font-size: 12px;
 }
+a.btn {
+    border-radius: 0;
+    color: #fff;
+}
 .clear{clear:both;display:block;}
 .navbar-wrapper {
     position: absolute;
@@ -71,7 +75,7 @@ body {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a1f24', endColorstr='#1c1e22',GradientType=1 ); /* IE6-9 */
     color:#fff;
 }
-.hm-btn {
+.hm-btn, .hm-btn-green, .hm-btn-blue {
     background: #0273b9; /* Old browsers */
     background: -moz-linear-gradient(top, #0273b9 0%, #0c4b90 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top, #0273b9 0%,#0c4b90 100%); /* Chrome10-25,Safari5.1-6 */
@@ -81,6 +85,20 @@ body {
     -moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
     padding: 4px 12px;
+}
+.hm-btn-green{
+    background: #3ea850;
+    background: -moz-linear-gradient(top, #3ea850 0%, #3b9054 100%);
+    background: -webkit-linear-gradient(top, #3ea850 0%,#3b9054 100%);
+    background: linear-gradient(to bottom, #3ea850 0%,#3b9054 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3ea850', endColorstr='#3b9054',GradientType=0 );    
+}
+.hm-btn-blue{
+    background: #45779b;
+    background: -moz-linear-gradient(top, #45779b 0%, #4b6b8f 100%);
+    background: -webkit-linear-gradient(top, #45779b 0%,#4b6b8f 100%);
+    background: linear-gradient(to bottom, #45779b 0%,#4b6b8f 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45779b', endColorstr='#4b6b8f',GradientType=0 );
 }
 .hm-nav-menu li a.hm-btn:hover{
     color: #FEF54B;
@@ -440,6 +458,35 @@ a.hm-btn-outline {
     min-width: 0;
     margin: 10px;
 }
+.hm-section-light.fullpage{
+    position: fixed;
+    left: 0;
+    right:0;
+    top:0;
+    bottom:0;
+}
+.hm-block-item.hm-big-box {
+    max-width: 330px;
+    min-height: 300px;
+    display: block !important;
+    width: auto;
+    margin: auto;
+    padding: 20px;
+    color:#fff;
+    box-shadow: 2px 2px 20px rgba(0,0,0,0.6);
+    -moz-box-shadow:    2px 2px 20px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 2px 2px 20px rgba(0,0,0,0.6);
+}
+.hm-block-item a {
+    color: #93BEFF;
+}
+.hm-block-item a.btn {
+    color:#fff;
+}
+.hm-block-item a:hover {
+    color: #FFFEA9;
+}
+
 
 
 /* Animations*/
