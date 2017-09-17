@@ -46,7 +46,7 @@ a.btn {
     margin: 0 auto 10px;
     color: #fff;
     padding: 15px;
-    max-width: 500px;
+    max-width: 600px;
 }
 .blurred {
     -webkit-filter: url(#blur);
@@ -140,7 +140,7 @@ a.navbar-brand {
     max-width:50px;
 }
 .hm-shortline.dark {
-    border-top: 1px solid #333;
+    border-top: 1px solid #0958A2;
 }
 li.hm-nav-line {
     text-align: right;
@@ -158,7 +158,7 @@ li.hm-nav-line .hm-shortline {
     background-attachment: fixed;
 }
 .hm-blocks-outer {
-    max-width: 98%;
+    max-width: 95%;
     min-width: 700px;
     margin: 20px auto;
 }
@@ -172,13 +172,12 @@ li.hm-nav-line .hm-shortline {
     display: inline-block;
     vertical-align: top;
     width: 60%;
-    min-width: 400px;
 }
 .hm-block-item {
     width: 48%;
     min-width: 140px;
     min-height: 140px;
-    margin: 0 1% 2% 1%;
+    margin: 0 1% 10px;
     float: left;
     padding: 5px;
     background: rgba(23,77,125,0.8);
@@ -193,7 +192,6 @@ li.hm-nav-line .hm-shortline {
 }
 .hm-block-item.big{
     width: 98%;
-    min-width:390px;
     height: 440px;
     
 }
@@ -264,8 +262,7 @@ li.hm-nav-line .hm-shortline {
 }
 #countdown_dashboard {
     color: #fff;
-    margin: auto;
-    margin-top: 140px;
+    margin: 90px auto 50px;
     display: inline-block;
     text-align: center;
 }
@@ -318,55 +315,60 @@ a.hm-btn.hm-btn-big {
 
 }
 .hm-roadmap {
-    width:930px;
-    margin:auto;
-
+    width: 960px;
+    margin: auto;
+    background-image: url(../images/loop.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    height: 230px;
 }
 .hm-roadmap>div {
     display: block;
-    float: left;
-    height: 300px;
-    background-position: 0px 80px !important;
-    position: relative;
-    box-sizing: border-box;
+    position: absolute;
     line-height: 1em;
+    font-size: 11px;
 }
 .hm-roadmap>div.alt {
-    padding-top: 220px;
+    bottom: 0;
+    font-size: 11px;
 }
 .hm-roadmap>div h5 {
-    font-weight: bold;
-    color:#000;
+    color: #2269A7;
+    margin: 0 0 4px;
+    font-size: 13px;
 }
-.hm-roadmap .map1 {
+.hm-roadmap .xmap1 {
     width: 216px;
-    background: url(../images/loop1.png) no-repeat;
-    padding-left: 53px;
+    left: 3%;
 }
-.hm-roadmap .map2 {
+.hm-roadmap .xmap2 {
     width: 166px;
-    background: url(../images/loop2.png) no-repeat;
+    left: 24%;
 }
-.hm-roadmap .map3 {
+.hm-roadmap .xmap3 {
     width: 166px;
-    background: url(../images/loop3.png) no-repeat;
+    left: 41%;
 }
-.hm-roadmap .map4 {
+.hm-roadmap .xmap4 {
     width: 166px;
-    background: url(../images/loop4.png) no-repeat;
+    left: 59%;
 }
-.hm-roadmap .map5 {
+.hm-roadmap .xmap5 {
     width: 215px;
-    background: url(../images/loop5.png) no-repeat;
-    padding-right: 50px;
+    left: 74%;
 }
 .hm-whitepaper {
     max-width: 700px;
-    background: url(../images/book.png) no-repeat;
-    background-size: 45%;
     margin: auto;
-    background-position: 0px 40px;
     min-height: 255px;
+}
+.hm-whitepaper img {
+    width:auto;
+    height:auto;
+    max-width:100%;
+    max-height:100%;
 }
 .hm-book {
     position: relative;
@@ -493,6 +495,24 @@ a.hm-btn-outline {
 }
 .hm-block-item a:hover {
     color: #FFFEA9;
+}
+.hm-caption-dark h4 {
+    line-height: 25px;
+}
+.hm-caption-dark h4>span {
+    color:#68C5E9;
+}
+.section {
+    padding-bottom:40px;
+}
+.section h4 {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #183552;
+}
+.section h4 hr {
+    margin-top: 15px;
+    margin-bottom: 10px;
 }
 
 
@@ -665,8 +685,15 @@ a.hm-btn-outline {
     .hm-whitepaper {
         background-image:none;
     }
+    .hm-block-item.big {
+        height: 350px;
+    }
     .hm-tokensale-numbers {display:none;}
     .section-about-footer {text-align:center;}
+    .hm-blocks-outer {min-width:auto;}
+    .digit {
+        font-size:30px;
+    }
 }
 @media (max-width: 600px) {
 
