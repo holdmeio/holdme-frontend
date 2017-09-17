@@ -2,6 +2,10 @@
 /* NOTE:                                                                                     */
 /* Minify this file after editing, as all pages will be using minified version of this file  */
 /* for better performance                                                                    */
+/* References :                                                                              */
+/* https://github.com/VincentGarreau/particles.js/                                           */
+/* http://www.littlewebthings.com/projects/countdown/                                        */
+/* https://github.com/michalsnik/aos                                                         */
 /*********************************************************************************************/
 
 /* VARIABLES */
@@ -21,6 +25,7 @@ $(function(){
     else hm_loadParticle(id,50);
   });
   hm_countdown();
+  AOS.init();
 });
 function hm_loadParticle(id,num,size,line){
     if (!num) num = 100;
