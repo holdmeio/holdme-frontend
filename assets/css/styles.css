@@ -744,6 +744,21 @@ a.hm-btn-outline {
     .digit {
         font-size:30px;
     }
+    .hm-code {
+        margin: 10px;
+    }
+    img {
+        max-width: 96%;
+    }
+    .hm-roadmap {
+        background-image: url(../images/loop-v.png);
+        height: auto;
+        background-position: top left;
+        padding-top: 50px;
+    }
+    .hm-roadmap .xmap1, .hm-roadmap .xmap2, .hm-roadmap .xmap3, .hm-roadmap .xmap4, .hm-roadmap .xmap5, .hm-roadmap .xmap6 {
+        left: 0 !important;
+    }
 }
 @media (max-width: 600px) {
 
