@@ -376,7 +376,8 @@ a.hm-btn.hm-btn-big {
 .hm-tokensale-block {
     max-width: 700px;
     margin: auto;
-    font-size: 10px;
+    font-size: 11px;
+    display:inline-block;
 }
 .hm-line-number {
     position: relative;
@@ -514,7 +515,56 @@ a.hm-btn-outline {
     margin-top: 15px;
     margin-bottom: 10px;
 }
-
+.hm-tokensale-item {
+    position: relative;
+    padding-left: 50px;
+    padding-top: 5px;
+}
+.hm-tokensale-item::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 12px;
+    background: #0959a3;
+}
+.hm-tokensale-item .number {
+    position: absolute;
+    left: 10px;
+    top: 9px;
+    color: #fff;
+    background: #0959a3;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    padding-top: 5px;
+    border-radius: 50%;
+}
+.hm-tokensale-item .content span {
+    color: #0A59A3;
+}
+.hm-text-note{
+    vertical-align: bottom;
+    color:#333 !important;
+}
+.section.bgdark h4 {
+    color: #fff;
+}
+.hm-code {
+    max-width: 900px;
+    margin: auto;
+    max-height: 400px;
+    overflow: auto;
+}
+.hm-code .gist-file {
+    margin: 0 !important;
+}
+.hm-code .gist-meta {
+    display:none;
+}
 
 
 
