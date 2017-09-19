@@ -13,6 +13,9 @@
 body {    
     font-size: 12px;
 }
+img {
+    max-width: 100%;
+}
 a.btn {
     border-radius: 0;
     color: #fff;
@@ -360,8 +363,7 @@ a.hm-btn.hm-btn-big {
     left: 74%;
 }
 .hm-whitepaper {
-    max-width: 700px;
-    margin: auto;
+    margin: 0 25px;
     min-height: 255px;
 }
 .hm-whitepaper img {
@@ -374,10 +376,8 @@ a.hm-btn.hm-btn-big {
     position: relative;
 }
 .hm-tokensale-block {
-    max-width: 700px;
-    margin: auto;
-    font-size: 11px;
-    display:inline-block;
+    margin: 0 10%;
+    font-size: 12px;
 }
 .hm-line-number {
     position: relative;
@@ -436,7 +436,8 @@ a.hm-btn.hm-btn-big {
 a.hm-btn-outline {
     color: #666;
     border: 1px solid #666;
-    padding: 5px 10px;
+    padding: 9px 15px;
+    display: inline-block;
 }
 .section.section-footer {
     padding: 20px;
@@ -446,9 +447,9 @@ a.hm-btn-outline {
 .hm-blocks-outer.simple>.hm-block-item {
     float: none;
     display: inline-block;
+    width:17%;
 }
 .hm-blocks-outer.simple {
-    max-width: 765px;
     margin: 20px auto;
     text-align: center;
 }
@@ -565,7 +566,10 @@ a.hm-btn-outline {
 .hm-code .gist-meta {
     display:none;
 }
-
+.hm-col-2 {
+    column-count: 2;
+    font-size: 12px;
+}
 
 
 /* Animations*/
@@ -758,6 +762,12 @@ a.hm-btn-outline {
     }
     .hm-roadmap .xmap1, .hm-roadmap .xmap2, .hm-roadmap .xmap3, .hm-roadmap .xmap4, .hm-roadmap .xmap5, .hm-roadmap .xmap6 {
         left: 0 !important;
+    }
+    .hm-col-2 {
+        column-count: 1;
+    }
+    .hm-tokensale-block {
+        margin: 0 10px;
     }
 }
 @media (max-width: 600px) {
