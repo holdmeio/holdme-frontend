@@ -192,6 +192,7 @@ li.hm-nav-line .hm-shortline {
     -moz-box-shadow:    inset 2px 2px 20px rgba(0,0,0,0.4);
     -webkit-box-shadow: inset 2px 2px 20px rgba(0,0,0,0.4);
     position:relative;
+    color:#fff;
 }
 .hm-block-item.big{
     width: 98%;
@@ -481,7 +482,7 @@ a.hm-btn-outline {
     max-width: 330px;
     min-height: 300px;
     display: block !important;
-    width: auto;
+    width: auto !important;
     margin: auto;
     padding: 20px;
     color:#fff;
@@ -494,6 +495,7 @@ a.hm-btn-outline {
 }
 .hm-block-item a.btn {
     color:#fff;
+    min-width:100px;
 }
 .hm-block-item a:hover {
     color: #FFFEA9;
@@ -570,6 +572,57 @@ a.hm-btn-outline {
     column-count: 2;
     font-size: 12px;
 }
+.hm-dialog {
+    position: fixed;
+    top: -500px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    min-height: auto !important;
+    padding-left: 110px !important;
+    text-align: left;
+    min-width: 200px;
+    max-width: 435px !important;
+}
+.hm-dialog-footer {
+    margin-top: 15px;
+}
+.hm-dialog.dialog-ok .hm-dialog-icon {
+    background-image: url(../images/ok.png);
+    background-repeat: no-repeat;
+    background-position: 0px 20px;
+    width: 90px;
+    position: absolute;
+    background-size: contain;
+    top: 0;
+    bottom: 0;
+    left: 15px;
+}
+.hm-dialog-layer {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.5);
+    display:none;
+}
+.hm-dialog-body {
+    padding-top: 10px;
+}
+.with-dialog .hm-dialog {
+    top: 25px;
+}
+.with-dialog .hm-dialog-layer {
+    display:block;
+}
+.img-icon.large {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 3px;
+}
+.label-icon h4 {color:#fff;}
+
 
 
 /* Animations*/
@@ -699,6 +752,7 @@ a.hm-btn-outline {
         margin: 0 0 1px;
         height: auto;
         min-height: auto;
+        color:#fff;
     }
     .hm-block-item.big {
         width: 100%;
