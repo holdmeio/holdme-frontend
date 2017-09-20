@@ -366,6 +366,7 @@ a.hm-btn.hm-btn-big {
 .hm-whitepaper {
     margin: 0 25px;
     min-height: 255px;
+    font-size: 14px;
 }
 .hm-whitepaper img {
     width:auto;
