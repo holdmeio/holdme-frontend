@@ -2,6 +2,10 @@
 /* NOTE:                                                                                     */
 /* Minify this file after editing, as all pages will be using minified version of this file  */
 /* for better performance                                                                    */
+/* References :                                                                              */
+/* https://github.com/VincentGarreau/particles.js/                                           */
+/* http://www.littlewebthings.com/projects/countdown/                                        */
+/* https://github.com/michalsnik/aos                                                         */
 /*********************************************************************************************/
 
 /* VARIABLES */
@@ -21,6 +25,8 @@ $(function(){
     else hm_loadParticle(id,50);
   });
   hm_countdown();
+  hm_prepareDialog();
+  if (typeof AOS != 'undefined') AOS.init();
 });
 function hm_loadParticle(id,num,size,line){
     if (!num) num = 100;
@@ -162,4 +168,27 @@ function hm_countdown() {
   } else {
     $('body').addClass('is-countdown-off');
   }
+}
+
+function hm_prepareDialog(){
+  var dlg = $('.hm-dialog-layer');
+  if (dlg.length<=0) {
+    dlg = $('<div class="hm-dialog-layer"></div><div class="anim hm-dialog hm-block-item hm-big-box dialog-ok"><div class="hm-dialog-bg"></div><div class="hm-dialog-icon"></div><div class="hm-dialog-body"></div><div class="hm-dialog-footer"><div class="text-left"><a href="#" class="btn hm-btn-green pull-right" onclick="hm_closeDialog();return false;">OK</a></div></div></div>');
+    $('body').append(dlg);
+  }  
+}
+function hm_openDialog(msg) {
+  var dlg = $('.hm-dialog-layer');
+  if (dlg.length<=0) {
+    dlg = $('<div class="hm-dialog-layer"></div><div class="anim hm-dialog hm-block-item hm-big-box dialog-ok"><div class="hm-dialog-bg"></div><div class="hm-dialog-icon"></div><div class="hm-dialog-body">'+msg+'</div><div class="hm-dialog-footer"><div class="text-left"><a href="#" class="btn hm-btn-green pull-right" onclick="hm_closeDialog();return false;">OK</a></div></div></div>');
+    $('body').append(dlg);
+  } else {
+    $('.hm-dialog .hm-dialog-body').html(msg);
+  }
+  $('body').addClass('with-dialog');
+}
+
+function hm_closeDialog(){
+  $('.hm-dialog .hm-dialog-body').html('');
+  $('body').removeClass('with-dialog');
 }

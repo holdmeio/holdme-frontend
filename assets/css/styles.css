@@ -13,6 +13,13 @@
 body {    
     font-size: 12px;
 }
+img {
+    max-width: 100%;
+}
+a.btn {
+    border-radius: 0;
+    color: #fff;
+}
 .clear{clear:both;display:block;}
 .navbar-wrapper {
     position: absolute;
@@ -32,7 +39,7 @@ body {
     background-image: url(../images/holdme-logo-white.svg), none;
     display: inline-block;
     width: 90px;
-    height: 60px;
+    height: 70px;
     position: relative;
     z-index: 1;
     background-size: contain;
@@ -42,7 +49,7 @@ body {
     margin: 0 auto 10px;
     color: #fff;
     padding: 15px;
-    max-width: 500px;
+    max-width: 600px;
 }
 .blurred {
     -webkit-filter: url(#blur);
@@ -71,7 +78,7 @@ body {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a1f24', endColorstr='#1c1e22',GradientType=1 ); /* IE6-9 */
     color:#fff;
 }
-.hm-btn {
+.hm-btn, .hm-btn-green, .hm-btn-blue {
     background: #0273b9; /* Old browsers */
     background: -moz-linear-gradient(top, #0273b9 0%, #0c4b90 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top, #0273b9 0%,#0c4b90 100%); /* Chrome10-25,Safari5.1-6 */
@@ -81,6 +88,20 @@ body {
     -moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
     padding: 4px 12px;
+}
+.hm-btn-green{
+    background: #3ea850;
+    background: -moz-linear-gradient(top, #3ea850 0%, #3b9054 100%);
+    background: -webkit-linear-gradient(top, #3ea850 0%,#3b9054 100%);
+    background: linear-gradient(to bottom, #3ea850 0%,#3b9054 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3ea850', endColorstr='#3b9054',GradientType=0 );    
+}
+.hm-btn-blue{
+    background: #45779b;
+    background: -moz-linear-gradient(top, #45779b 0%, #4b6b8f 100%);
+    background: -webkit-linear-gradient(top, #45779b 0%,#4b6b8f 100%);
+    background: linear-gradient(to bottom, #45779b 0%,#4b6b8f 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45779b', endColorstr='#4b6b8f',GradientType=0 );
 }
 .hm-nav-menu li a.hm-btn:hover{
     color: #FEF54B;
@@ -103,7 +124,7 @@ a.navbar-brand img {
 .hm-nav-menu li a {
     color: #fff;
     text-decoration: none;
-    font-size: 11px;
+    font-size: 12px;
     text-shadow: 1px 1px 2px #000;
 }
 .hm-nav-menu li.active a {
@@ -122,7 +143,7 @@ a.navbar-brand {
     max-width:50px;
 }
 .hm-shortline.dark {
-    border-top: 1px solid #333;
+    border-top: 1px solid #0958A2;
 }
 li.hm-nav-line {
     text-align: right;
@@ -140,23 +161,26 @@ li.hm-nav-line .hm-shortline {
     background-attachment: fixed;
 }
 .hm-blocks-outer {
-    max-width: 700px;
+    max-width: 95%;
+    min-width: 700px;
     margin: 20px auto;
 }
 .hm-block-left {
     display: block;
-    width: 300px;
+    width: 40%;
+    min-width: 300px;
     float: left;
 }
 .hm-block-right {
     display: inline-block;
     vertical-align: top;
-    width: 400px;
+    width: 60%;
 }
 .hm-block-item {
-    width: 140px;
+    width: 48%;
+    min-width: 140px;
     min-height: 140px;
-    margin: 5px;
+    margin: 0 1% 10px;
     float: left;
     padding: 5px;
     background: rgba(23,77,125,0.8);
@@ -168,9 +192,10 @@ li.hm-nav-line .hm-shortline {
     -moz-box-shadow:    inset 2px 2px 20px rgba(0,0,0,0.4);
     -webkit-box-shadow: inset 2px 2px 20px rgba(0,0,0,0.4);
     position:relative;
+    color:#fff;
 }
 .hm-block-item.big{
-    width:390px;
+    width: 98%;
     height: 440px;
     
 }
@@ -241,9 +266,9 @@ li.hm-nav-line .hm-shortline {
 }
 #countdown_dashboard {
     color: #fff;
-    max-width: 300px;
-    margin: auto;
-    margin-top: 140px;
+    margin: 90px auto 50px;
+    display: inline-block;
+    text-align: center;
 }
 #countdown_dashboard>div{
     text-align: center;
@@ -252,10 +277,10 @@ li.hm-nav-line .hm-shortline {
     text-align: right;
     position: relative;
 }
-.dash.days_dash::after, .dash.minutes_dash::after{
+.dash.days_dash::after, .dash.hours_dash::after, .dash.minutes_dash::after{
     display: block;
     content: '';
-    height: 30px;
+    height: 65%;
     border-right: 1px solid #fff;
     width: 1px;
     position: absolute;
@@ -265,7 +290,7 @@ li.hm-nav-line .hm-shortline {
 .digit {
     display: inline-block;
     line-height: 1;
-    font-size: 40px;
+    font-size: 60px;
     font-weight: bold;
     letter-spacing: -3px;
 }
@@ -280,8 +305,10 @@ a.hm-btn.hm-btn-big {
     color: #fff;
     margin: 0 auto;
     display: block;
-    max-width: 160px;
-    text-align:center;
+    max-width: 350px;
+    text-align: center;
+    font-size: 16px;
+    padding: 7px 20px;
 }
 .social-links.light {
     position: absolute;
@@ -292,63 +319,67 @@ a.hm-btn.hm-btn-big {
 
 }
 .hm-roadmap {
-    width:930px;
-    margin:auto;
-
+    width: 960px;
+    margin: auto;
+    background-image: url(../images/loop.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    height: 230px;
 }
 .hm-roadmap>div {
     display: block;
-    float: left;
-    height: 300px;
-    background-position: 0px 80px !important;
-    position: relative;
-    box-sizing: border-box;
+    position: absolute;
     line-height: 1em;
+    font-size: 11px;
 }
 .hm-roadmap>div.alt {
-    padding-top: 220px;
+    bottom: 0;
+    font-size: 11px;
 }
 .hm-roadmap>div h5 {
-    font-weight: bold;
-    color:#000;
+    color: #2269A7;
+    margin: 0 0 4px;
+    font-size: 13px;
 }
-.hm-roadmap .map1 {
+.hm-roadmap .xmap1 {
     width: 216px;
-    background: url(../images/loop1.png) no-repeat;
-    padding-left: 53px;
+    left: 3%;
 }
-.hm-roadmap .map2 {
+.hm-roadmap .xmap2 {
     width: 166px;
-    background: url(../images/loop2.png) no-repeat;
+    left: 24%;
 }
-.hm-roadmap .map3 {
+.hm-roadmap .xmap3 {
     width: 166px;
-    background: url(../images/loop3.png) no-repeat;
+    left: 41%;
 }
-.hm-roadmap .map4 {
+.hm-roadmap .xmap4 {
     width: 166px;
-    background: url(../images/loop4.png) no-repeat;
+    left: 59%;
 }
-.hm-roadmap .map5 {
+.hm-roadmap .xmap5 {
     width: 215px;
-    background: url(../images/loop5.png) no-repeat;
-    padding-right: 50px;
+    left: 74%;
 }
 .hm-whitepaper {
-    max-width: 700px;
-    background: url(../images/book.png) no-repeat;
-    background-size: 45%;
-    margin: auto;
-    background-position: 0px 40px;
+    margin: 0 25px;
     min-height: 255px;
+    font-size: 14px;
+}
+.hm-whitepaper img {
+    width:auto;
+    height:auto;
+    max-width:100%;
+    max-height:100%;
 }
 .hm-book {
     position: relative;
 }
 .hm-tokensale-block {
-    max-width: 700px;
-    margin: auto;
-    font-size: 10px;
+    margin: 0 10%;
+    font-size: 12px;
 }
 .hm-line-number {
     position: relative;
@@ -407,7 +438,8 @@ a.hm-btn.hm-btn-big {
 a.hm-btn-outline {
     color: #666;
     border: 1px solid #666;
-    padding: 5px 10px;
+    padding: 9px 15px;
+    display: inline-block;
 }
 .section.section-footer {
     padding: 20px;
@@ -417,9 +449,9 @@ a.hm-btn-outline {
 .hm-blocks-outer.simple>.hm-block-item {
     float: none;
     display: inline-block;
+    width:17%;
 }
 .hm-blocks-outer.simple {
-    max-width: 765px;
     margin: 20px auto;
     text-align: center;
 }
@@ -440,6 +472,158 @@ a.hm-btn-outline {
     min-width: 0;
     margin: 10px;
 }
+.hm-section-light.fullpage{
+    position: fixed;
+    left: 0;
+    right:0;
+    top:0;
+    bottom:0;
+}
+.hm-block-item.hm-big-box {
+    max-width: 330px;
+    min-height: 300px;
+    display: block !important;
+    width: auto !important;
+    margin: auto;
+    padding: 20px;
+    color:#fff;
+    box-shadow: 2px 2px 20px rgba(0,0,0,0.6);
+    -moz-box-shadow:    2px 2px 20px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 2px 2px 20px rgba(0,0,0,0.6);
+}
+.hm-block-item a {
+    color: #93BEFF;
+}
+.hm-block-item a.btn {
+    color:#fff;
+    min-width:100px;
+}
+.hm-block-item a:hover {
+    color: #FFFEA9;
+}
+.hm-caption-dark h4 {
+    line-height: 25px;
+}
+.hm-caption-dark h4>span {
+    color:#68C5E9;
+}
+.section {
+    padding-bottom:40px;
+}
+.section h4 {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #183552;
+}
+.section h4 hr {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.hm-tokensale-item {
+    position: relative;
+    padding-left: 50px;
+    padding-top: 5px;
+}
+.hm-tokensale-item::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 12px;
+    background: #0959a3;
+}
+.hm-tokensale-item .number {
+    position: absolute;
+    left: 10px;
+    top: 9px;
+    color: #fff;
+    background: #0959a3;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    padding-top: 5px;
+    border-radius: 50%;
+}
+.hm-tokensale-item .content span {
+    color: #0A59A3;
+}
+.hm-text-note{
+    vertical-align: bottom;
+    color:#333 !important;
+}
+.section.bgdark h4 {
+    color: #fff;
+}
+.hm-code {
+    max-width: 900px;
+    margin: auto;
+    max-height: 400px;
+    overflow: auto;
+}
+.hm-code .gist-file {
+    margin: 0 !important;
+}
+.hm-code .gist-meta {
+    display:none;
+}
+.hm-col-2 {
+    column-count: 2;
+    font-size: 12px;
+}
+.hm-dialog {
+    position: fixed;
+    top: -500px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    min-height: auto !important;
+    padding-left: 110px !important;
+    text-align: left;
+    min-width: 200px;
+    max-width: 435px !important;
+}
+.hm-dialog-footer {
+    margin-top: 15px;
+}
+.hm-dialog.dialog-ok .hm-dialog-icon {
+    background-image: url(../images/ok.png);
+    background-repeat: no-repeat;
+    background-position: 0px 20px;
+    width: 90px;
+    position: absolute;
+    background-size: contain;
+    top: 0;
+    bottom: 0;
+    left: 15px;
+}
+.hm-dialog-layer {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.5);
+    display:none;
+}
+.hm-dialog-body {
+    padding-top: 10px;
+}
+.with-dialog .hm-dialog {
+    top: 25px;
+}
+.with-dialog .hm-dialog-layer {
+    display:block;
+}
+.img-icon.large {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 3px;
+}
+.label-icon h4 {color:#fff;}
+
 
 
 /* Animations*/
@@ -569,6 +753,7 @@ a.hm-btn-outline {
         margin: 0 0 1px;
         height: auto;
         min-height: auto;
+        color:#fff;
     }
     .hm-block-item.big {
         width: 100%;
@@ -609,8 +794,36 @@ a.hm-btn-outline {
     .hm-whitepaper {
         background-image:none;
     }
+    .hm-block-item.big {
+        height: 350px;
+    }
     .hm-tokensale-numbers {display:none;}
     .section-about-footer {text-align:center;}
+    .hm-blocks-outer {min-width:auto;}
+    .digit {
+        font-size:30px;
+    }
+    .hm-code {
+        margin: 10px;
+    }
+    img {
+        max-width: 96%;
+    }
+    .hm-roadmap {
+        background-image: url(../images/loop-v.png);
+        height: auto;
+        background-position: top left;
+        padding-top: 50px;
+    }
+    .hm-roadmap .xmap1, .hm-roadmap .xmap2, .hm-roadmap .xmap3, .hm-roadmap .xmap4, .hm-roadmap .xmap5, .hm-roadmap .xmap6 {
+        left: 0 !important;
+    }
+    .hm-col-2 {
+        column-count: 1;
+    }
+    .hm-tokensale-block {
+        margin: 0 10px;
+    }
 }
 @media (max-width: 600px) {
 
