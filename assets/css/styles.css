@@ -647,6 +647,20 @@ a.hm-btn-outline {
 .label-icon h4 {color:#fff;}
 .hm-block-item{cursor:pointer}
 .hm-block-item.selected{background: rgba(33, 160, 62, 0.8)}
+.section.section-grad {
+    background: -moz-linear-gradient(-45deg, rgba(91,46,112,0.7) 0%, rgba(30,150,193,0.7) 100%);
+    background: -webkit-linear-gradient(-45deg, rgba(91,46,112,0.7) 0%,rgba(30,150,193,0.7) 100%);
+    background: linear-gradient(135deg, rgba(91,46,112,0.7) 0%,rgba(30,150,193,0.7) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b35b2e70', endColorstr='#b31e96c1',GradientType=1 );
+    padding-top: 30px;
+    color: #fff;
+}
+.section.section-2.section-grad a, .section.section-grad h4 {
+    color: #fff;
+}
+
+
+
 
 
 /* Animations*/
