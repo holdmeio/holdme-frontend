@@ -11,7 +11,7 @@
 /* VARIABLES */
 var _countdown = true;
 // 2018[year] - 12[month] - 01[day] - countdown date
-var _countdown_date = [2017, 09, 20];
+var _countdown_date = [2017, 09, 30];
 // true, false - enable / disable utc time
 var _countdown_utc = true;
 
