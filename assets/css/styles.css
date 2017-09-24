@@ -740,6 +740,9 @@ a.btn-top {
 .hm-member-item>h5>span {
     font-size: 9px;
 }
+.section[id]:focus {
+    outline: none !important;
+}
 
 
 
