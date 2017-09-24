@@ -270,7 +270,7 @@ li.hm-nav-line .hm-shortline {
     background: url(../images/icon-ether.png);
     background-image: url(../images/icon-ether.svg), none;
 }
-.img-icon.bitcoin2, .img-icon.bitcoin-cash {
+.img-icon.bitcoin2, .img-icon.bitcoin-cash, .img-icon.bitcoincash {
     background: url(../images/icon-bitcoin-cash.png);
     background-image: url(../images/icon-bitcoin-cash.svg), none;
 }
@@ -434,8 +434,8 @@ a.hm-btn.hm-btn-big {
 .hm-image img {
     max-width: 80%;
 }
-.hm-market-block {
-    max-width: 800px;
+.hm-market-block, .hm-members-block {
+    max-width: 1000px;
     margin: auto;
 }
 .hm-form input, .hm-form textarea {
@@ -658,6 +658,86 @@ a.hm-btn-outline {
 .section.section-2.section-grad a, .section.section-grad h4 {
     color: #fff;
 }
+.hm-member-row::after {
+    content: '';
+    display: block;
+    position: relative;
+    clear:both;
+}
+.hm-member-row.top {
+    margin-top: 60px;
+}
+.hm-member-row.bottom {
+    margin-bottom: 40px;
+}
+.hm-member-row .hm-member-item {
+    width: 23%;
+    margin: 1%;
+    float: left;
+    text-align: center;
+    position: relative;
+    background: #eee;
+    padding: 10px;
+}
+.hm-member-row.top .hm-member-item {
+    border-radius: 8% 8% 0 0;
+}
+.hm-member-row.bottom .hm-member-item {
+    border-radius: 0 0 8% 8%;
+    padding-bottom:50px;
+}
+.hm-member-item .hm-links img {
+    max-height: 17px;
+    display: inline-block;
+    margin: 5px;
+    opacity: 0.6;
+}
+.hm-member-row .hm-member-pic {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    border-radius: 50%;
+    margin: auto;
+}
+.hm-member-row img.hm-member-badge {
+    position: absolute;
+    max-width: 39px;
+}
+.hm-member-row.top .hm-member-pic {
+    margin-top: -60px;
+}
+.hm-member-row.top img.hm-member-badge {
+    right: 10px;
+    top: 7px;
+}
+.hm-member-row.bottom .hm-member-pic {
+    bottom: -50px;
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+}
+.hm-member-row.bottom img.hm-member-badge {
+    right: 10px;
+    bottom: 7px;
+}
+.hm-member-item h4 {
+    color: #163650;
+    font-size: 14px;
+}
+.hm-member-item h5 {
+    color: #163650;
+    font-size: 12px;
+}
+a.btn-top {
+    position: fixed;
+    bottom: -100px;
+    right: 0;
+    z-index: 10;
+}
+.with-toplink a.btn-top {
+    bottom: 0px;
+}
+
 
 
 
@@ -860,6 +940,32 @@ a.hm-btn-outline {
     }
     .hm-tokensale-block {
         margin: 0 10px;
+    }
+    .hm-member-item {
+        float: none !important;
+        width: auto !important;
+        border-radius: 5px 0 0 5px !important;
+        margin: 10px 15px 15px 60px !important;
+        padding-left: 60px !important;
+        text-align:left !important;
+        padding-bottom:10px !important;
+    }
+    .hm-member-item .hm-links {
+        margin-left: -5px;
+    }
+    .hm-member-item .hm-member-pic {
+        margin: 0 !important;
+        float: left;
+        position: absolute !important;
+        left: -50px !important;
+        bottom: auto !important;
+    }
+    .hm-member-row img.hm-member-badge {
+        right: 10px;
+        top: 7px;
+    }
+    .hm-member-row.bottom {
+        margin-bottom: 0px;
     }
 }
 @media (max-width: 600px) {
