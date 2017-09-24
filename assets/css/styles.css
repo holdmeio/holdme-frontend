@@ -78,7 +78,14 @@ a.btn {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a1f24', endColorstr='#1c1e22',GradientType=1 ); /* IE6-9 */
     color:#fff;
 }
-.hm-btn, .hm-btn-green, .hm-btn-blue {
+.btn.focus, .btn:focus, .btn:hover {
+    color: #fcff70;
+}
+.btn.active, .btn:active {
+    background-color: rgba(0,0,0,0.2);
+}
+
+.hm-btn, .hm-btn-green, .hm-btn-blue,.hm-btn-red {
     background: #0273b9; /* Old browsers */
     background: -moz-linear-gradient(top, #0273b9 0%, #0c4b90 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top, #0273b9 0%,#0c4b90 100%); /* Chrome10-25,Safari5.1-6 */
@@ -102,6 +109,13 @@ a.btn {
     background: -webkit-linear-gradient(top, #45779b 0%,#4b6b8f 100%);
     background: linear-gradient(to bottom, #45779b 0%,#4b6b8f 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45779b', endColorstr='#4b6b8f',GradientType=0 );
+}
+.hm-btn-red{
+    background: #9B4545;
+    background: -moz-linear-gradient(top, #9B4545 0%, #8F4B4B 100%);
+    background: -webkit-linear-gradient(top, #9B4545 0%,#8F4B4B 100%);
+    background: linear-gradient(to bottom, #9B4545 0%,#8F4B4B 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9B4545', endColorstr='#8F4B4B',GradientType=0 );
 }
 .hm-nav-menu li a.hm-btn:hover{
     color: #FEF54B;
@@ -252,13 +266,13 @@ li.hm-nav-line .hm-shortline {
     background: url(../images/icon-litecoin.png);
     background-image: url(../images/icon-litecoin.svg), none;
 }
-.img-icon.ethereum {
-    background: url(../images/icon-ethereum.png);
-    background-image: url(../images/icon-ethereum.svg), none;
+.img-icon.ethereum, .img-icon.ether {
+    background: url(../images/icon-ether.png);
+    background-image: url(../images/icon-ether.svg), none;
 }
-.img-icon.bitcoin2 {
-    background: url(../images/icon-bitcoin2.png);
-    background-image: url(../images/icon-bitcoin2.svg), none;
+.img-icon.bitcoin2, .img-icon.bitcoin-cash {
+    background: url(../images/icon-bitcoin-cash.png);
+    background-image: url(../images/icon-bitcoin-cash.svg), none;
 }
 .img-icon.dash {
     background: url(../images/icon-dash.png);
@@ -364,7 +378,7 @@ a.hm-btn.hm-btn-big {
     left: 74%;
 }
 .hm-whitepaper {
-    margin: 0 25px;
+    margin: 0 25px; 
     min-height: 255px;
     font-size: 14px;
 }
@@ -588,8 +602,7 @@ a.hm-btn-outline {
 .hm-dialog-footer {
     margin-top: 15px;
 }
-.hm-dialog.dialog-ok .hm-dialog-icon {
-    background-image: url(../images/ok.png);
+.hm-dialog .hm-dialog-icon {
     background-repeat: no-repeat;
     background-position: 0px 20px;
     width: 90px;
@@ -598,6 +611,15 @@ a.hm-btn-outline {
     top: 0;
     bottom: 0;
     left: 15px;
+}
+.hm-dialog.dialog-ok .hm-dialog-icon {
+    background-image: url(../images/ok.png);
+}
+.hm-dialog.dialog-error .hm-dialog-icon {
+    background-image: url(../images/error.png);
+}
+.hm-dialog.dialog-info .hm-dialog-icon {
+    background-image: url(../images/info.png);
 }
 .hm-dialog-layer {
     position: fixed;
@@ -623,7 +645,8 @@ a.hm-btn-outline {
     margin-bottom: 3px;
 }
 .label-icon h4 {color:#fff;}
-
+.hm-block-item{cursor:pointer}
+.hm-block-item.selected{background: rgba(33, 160, 62, 0.8)}
 
 
 /* Animations*/
