@@ -378,9 +378,10 @@ a.hm-btn.hm-btn-big {
     left: 74%;
 }
 .hm-whitepaper {
-    margin: 0 25px; 
+    margin: 0 auto;
     min-height: 255px;
     font-size: 14px;
+    max-width: 980px;
 }
 .hm-whitepaper img {
     width:auto;
