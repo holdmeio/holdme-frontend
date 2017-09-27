@@ -599,6 +599,7 @@ a.hm-btn-outline {
     text-align: left;
     min-width: 200px;
     max-width: 435px !important;
+    z-index:99999;
 }
 .hm-dialog-footer {
     margin-top: 15px;
@@ -630,6 +631,7 @@ a.hm-btn-outline {
     right: 0;
     background: rgba(0,0,0,0.5);
     display:none;
+    z-index:99999;
 }
 .hm-dialog-body {
     padding-top: 10px;
