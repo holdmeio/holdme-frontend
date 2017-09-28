@@ -431,6 +431,7 @@ a.hm-btn.hm-btn-big {
 .hm-image {
     position: relative;
     z-index: 1;
+    margin:0 15px;
 }
 .hm-image img {
     max-width: 80%;
@@ -577,6 +578,7 @@ a.hm-btn-outline {
     margin: auto;
     max-height: 400px;
     overflow: auto;
+    border: 1px solid #999;
 }
 .hm-code .gist-file {
     margin: 0 !important;
@@ -749,6 +751,25 @@ a.btn-top {
 
 
 
+
+/* GIST */
+.gist .gist-file {
+    border:0 !important;
+}
+.gist table {
+    background: #000 !important;
+}
+.gist table td {
+    color: #fff !important;
+}
+.gist .gist-data {
+    border-bottom: 0 !important;
+    border-radius: 0 !important;
+}
+.gist .blob-wrapper {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
 
 
 /* Animations*/
