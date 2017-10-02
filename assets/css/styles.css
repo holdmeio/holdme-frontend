@@ -496,13 +496,14 @@ a.hm-btn-outline {
     bottom:0;
 }
 .hm-block-item.hm-big-box {
-    max-width: 330px;
+    max-width: 430px;
     min-height: 300px;
     display: block !important;
     width: auto !important;
     margin: auto;
     padding: 20px;
     color:#fff;
+    word-wrap: break-word;
     box-shadow: 2px 2px 20px rgba(0,0,0,0.6);
     -moz-box-shadow:    2px 2px 20px rgba(0,0,0,0.6);
     -webkit-box-shadow: 2px 2px 20px rgba(0,0,0,0.6);
@@ -640,6 +641,7 @@ a.hm-btn-outline {
 }
 .with-dialog .hm-dialog {
     top: 25px;
+    z-index:99999;
 }
 .with-dialog .hm-dialog-layer {
     display:block;
