@@ -270,7 +270,10 @@ li.hm-nav-line .hm-shortline {
     background: url(../images/icon-ether.png);
     background-image: url(../images/icon-ether.svg), none;
 }
-.img-icon.bitcoin2, .img-icon.bitcoin-cash, .img-icon.bitcoincash {
+.img-icon.bitcoin2,
+.img-icon.bitcoin-cash,
+.img-icon.bitcoincash,
+.img-icon.bitcoinCash {
     background: url(../images/icon-bitcoin-cash.png);
     background-image: url(../images/icon-bitcoin-cash.svg), none;
 }
@@ -395,6 +398,7 @@ a.hm-btn.hm-btn-big {
 .hm-tokensale-block {
     margin: 0 10%;
     font-size: 12px;
+	display:inline-block;
 }
 .hm-line-number {
     position: relative;
@@ -439,6 +443,8 @@ a.hm-btn.hm-btn-big {
 .hm-market-block, .hm-members-block {
     max-width: 1000px;
     margin: auto;
+    font-size: 16px;
+    text-align: justify;
 }
 .hm-form input, .hm-form textarea {
     border: 1px solid #ccc;
@@ -567,6 +573,10 @@ a.hm-btn-outline {
 .hm-tokensale-item .content span {
     color: #0A59A3;
 }
+.hm-tokensale-item .hm-col-2 {
+    column-count: 1;
+    font-size: 15px;
+}
 .hm-text-note{
     vertical-align: bottom;
     color:#333 !important;
@@ -593,6 +603,7 @@ a.hm-btn-outline {
 }
 .hm-dialog {
     position: fixed;
+
     top: -500px;
     left: 0;
     right: 0;
@@ -671,20 +682,25 @@ a.hm-btn-outline {
     position: relative;
     clear:both;
 }
+.hm-member-row {
+    margin-top: 60px;
+    text-align: center;
+}
 .hm-member-row.top {
     margin-top: 60px;
 }
 .hm-member-row.bottom {
     margin-bottom: 40px;
+    margin-top: 0px;
 }
 .hm-member-row .hm-member-item {
-    width: 23%;
+    width: 18%;
     margin: 1%;
-    float: left;
     text-align: center;
     position: relative;
     background: #eee;
     padding: 10px;
+    display: inline-block;
 }
 .hm-member-row.top .hm-member-item {
     border-radius: 8% 8% 0 0;
@@ -742,7 +758,7 @@ a.btn-top {
     z-index: 10;
 }
 .with-toplink a.btn-top {
-    bottom: 0px;
+    bottom: 9px;
 }
 .hm-member-item>h5>span {
     font-size: 9px;
