@@ -184,7 +184,6 @@ li.hm-nav-line .hm-shortline {
 }
 .hm-section-newsletter.bg2 {
     background:#fff url(../images/bg-subscribe.jpg) no-repeat top left;
-    background-size: cover;
 }
 .hm-blocks-outer {
     max-width: 95%;
@@ -678,15 +677,12 @@ a.hm-btn-outline {
 .hm-block-item{cursor:pointer}
 .hm-block-item.selected{background: rgba(33, 160, 62, 0.8)}
 .section.section-grad {
-    background: url(../images/background.jpg),-moz-linear-gradient(-45deg, rgba(91,46,112,0.9) 0%, rgba(30,150,193,0.9) 100%);
-    background: url(../images/background.jpg),-webkit-linear-gradient(-45deg, rgba(91,46,112,0.9) 0%,rgba(30,150,193,0.9) 100%);
-    background: url(../images/background.jpg),linear-gradient(135deg, rgba(91,46,112,0.9) 0%,rgba(30,150,193,0.9) 100%);
+    background: -moz-linear-gradient(-45deg, rgba(91,46,112,0.7) 0%, rgba(30,150,193,0.7) 100%);
+    background: -webkit-linear-gradient(-45deg, rgba(91,46,112,0.7) 0%,rgba(30,150,193,0.7) 100%);
+    background: linear-gradient(135deg, rgba(91,46,112,0.7) 0%,rgba(30,150,193,0.7) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b35b2e70', endColorstr='#b31e96c1',GradientType=1 );
     padding-top: 30px;
     color: #fff;
-    background-blend-mode: color-burn;
-    background-attachment: fixed;
-    background-size: cover;
 }
 .section.section-2.section-grad a, .section.section-grad h4 {
     color: #fff;
@@ -823,7 +819,7 @@ a.btn-top {
 }
 .fade-links>a {
     display: inline-block;
-    margin: 15px 30px;
+    margin: 15px 0;
     filter: gray; /* IE6-9 */
     -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
     filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */  
@@ -1266,7 +1262,6 @@ a.hm-tab-item.tab-other {
     .hm-member-row.bottom {
         margin-bottom: 0px;
     }
-    
 }
 @media (max-width: 600px) {
     .hm-newsletter-form>input {
@@ -1297,10 +1292,5 @@ a.hm-tab-item.tab-other {
     }
     .hm-midbox, .hm-box-rounded,.hm-market-block, .hm-members-block, .hm-middle-box {
         font-size: 12px;
-    }
-    .social-links a.icon {
-        display: inline-block;
-        margin: 0px 0px 8px;
-        width: 26px;
     }
 }

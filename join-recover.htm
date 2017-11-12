@@ -36,40 +36,21 @@
                 NOTICE : Bitcoin and Altcoin payments needs email and your ETH address registrations. </p>
             </div>
             <div class="hm-hovertabs">
-                <a href="#" class="hm-tab-item tab-ethereum active" ><img src="assets/images/icon-tb-ethereum.png"></a>
-                <a href="join-other.htm" class="hm-tab-item tab-other" ><img src="assets/images/icon-tb-other.png"></a>
+                <a href="join.htm" class="hm-tab-item tab-ethereum" ><img src="assets/images/icon-tb-ethereum.png"></a>
+                <a href="#" class="hm-tab-item tab-other active" ><img src="assets/images/icon-tb-other.png"></a>
             </div>
-            <div class="section section-layered">
-                <div class="hm-midbox">
-                    <div class="col-sm-5" >
-                        <img src="assets/images/icon-payment.png" height="50">
-                        <h2 style="margin-bottom:30px">Ethereum Payments</h2>
-                        <p>
-                            Ether payments can be made instantly using an ERC20 compliant wallet.
-                        </p>
-                        <p>    
-                            The minimum participation amount is 0.01 ETH. Do not send anything other than ETH to the Holdme Sale Contract or you will not be able to purchase HME Tokens and such transaction will be null and void.
-                        </p>
-                        <p>
-                            There are 2 ways to participate in the HME Token Sale
-                            <div class="hm-subtitle">1.) Send ETH directly to the Holdme Token Sale Contract</div>
-                            To take part in the current Holdme Token Sale period, simply send ETH directly to the Holdme Token Sale Contract.
-                            <div class="hm-subtitle">2) Use contribute ETH function in the Holdme Sales Contract</div>
-                                If you would like to purchase HME Tokens, you can use the contribute ETH function in the Holdme Sales Contract
-                        </p>
-                    </div>
-                    <div class="col-sm-1"></div>
-                    <div class="col-sm-6">
-                        <div class="hm-box-rounded">
-                                The Ethereum address for the token distribution is:
-                                <div class="hm-subtitle"><b>0x0a42ca8f86ef4f13c2a05a4fa348984b020f9cba</b></div>
-                                (ropsten test network)
-                                <br/><br/>
-                                Do not send ETH from an Exchange <br>
-                                If you send ETH to Holdme Token Sale Contract from an exchange account, your HME tokens will be allocated to the exchange's ETH account and you may never receive or be able to recover your HME tokens.
-                        </div>
+            <div class="section section-layered text-center">
+                Please enter your registration email to recover your link
+                <br><br>
+                <div class="hm-form line text-center" style="max-width: 300px;">
+                    <input type="text" placeholder="Enter your email"><br>
+                    <div class="text-center">
+                        <a href="#" class="hm-btn anim hm-btn-big" style="display:inline-block; width:200px;"> RESEND EMAIL </a>
+                        <br><br><a href="join-other.htm">Back</a> 
                     </div>
                 </div>
+                <br>
+                
             </div>
             <div class="section bg-grad ">
                 <br/>
@@ -112,5 +93,16 @@
         <script src="assets/js/bootstrap.min.js"></script>
         <script src="assets/js/particles.min.js"></script>
         <script src="assets/js/scripts.min.js"></script>
+        <script type="text/javascript">
+        function selectType(obj) {
+            $('.hm-block-item.active').removeClass('active');
+            $(obj).addClass('active');
+        }
+        $(function(){
+            $('.hm-block-item').click(function(){
+                selectType(this);
+            });
+        })
+        </script>
     </body>
 </html>  
