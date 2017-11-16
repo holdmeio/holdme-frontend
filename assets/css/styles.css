@@ -1119,7 +1119,10 @@ a.hm-tab-item.tab-other {
     -o-transform: rotate(-135deg);
     transform: rotate(-135deg);
 }
-
+.header-note {
+    color: #25A9E0;
+    font-size: 16px;
+}
 
 
 /* Media Queries */
